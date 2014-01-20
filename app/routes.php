@@ -15,3 +15,14 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+Route::get('cache', function()
+{
+
+    if(Input::has('value')) {
+        Cache::put('test', Input::get('value', null));
+    }
+
+    return Cache::get('test');
+
+});
