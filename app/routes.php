@@ -11,11 +11,6 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
-
 Route::get('cache', function()
 {
 
@@ -25,4 +20,9 @@ Route::get('cache', function()
 
     return Cache::get('test');
 
+});
+
+Route::get('/', function()
+{
+	return View::make('hello');
 });
