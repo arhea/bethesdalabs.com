@@ -48,10 +48,10 @@ return array(
 
 		'production' => array(
 			'driver'    => 'mysql',
-			'host'      => getenv('DB_HOST'),
-			'database'  => getenv('DB_NAME'),
-			'username'  => getenv('DB_USERNAME'),
-			'password'  => getenv('DB_PASSWORD'),
+			'host'      => getenv('RDS_HOSTNAME'),
+			'database'  => getenv('RDS_DB_NAME'),
+			'username'  => getenv('RDS_USERNAME'),
+			'password'  => getenv('RDS_PASSWORD'),
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
