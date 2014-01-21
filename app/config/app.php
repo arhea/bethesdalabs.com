@@ -65,7 +65,7 @@ return array(
 	|
 	*/
 
-	'key' => getenv('ENCRYPTION_KEY'),
+	'key' => getenv('BETHESDALABS_ENCRYPTION_KEY'),
 
 	/*
 	|--------------------------------------------------------------------------

@@ -48,10 +48,10 @@ return array(
 
 		'production' => array(
 			'driver'    => 'mysql',
-			'host'      => getenv('RDS_HOSTNAME'),
-			'database'  => getenv('RDS_DB_NAME'),
-			'username'  => getenv('RDS_USERNAME'),
-			'password'  => getenv('RDS_PASSWORD'),
+			'host'      => getenv('BETHESDALABS_DB_HOST'),
+			'database'  => getenv('BETHESDALABS_DB_NAME'),
+			'username'  => getenv('BETHESDALABS_DB_USERNAME'),
+			'password'  => getenv('BETHESDALABS_DB_PASSWORD'),
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
