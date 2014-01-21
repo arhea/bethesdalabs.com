@@ -31,8 +31,8 @@ return array(
     | more information see http://docs.aws.amazon.com/aws-sdk-php-2/guide/latest/configuration.html
     |
     */
-    'key'    => 'YOUR_AWS_ACCESS_KEY_ID',
-    'secret' => 'YOUR_AWS_SECRET_KEY',
+    'key'    => getenv('AWS_ACCESS_KEY_ID'),
+    'secret' => getenv('AWS_SECRET_KEY'),
 
     /*
     |--------------------------------------------------------------------------
