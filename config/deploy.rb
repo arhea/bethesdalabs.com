@@ -19,11 +19,12 @@ namespace :deploy do
     desc "Installing PHP dependencies."
     task :composer_install do
         on roles(:all), in: :sequence, wait: 5 do
+            execute "composer self-update"
             execute "cd #{release_path} && composer install --no-dev"
         end
     end
 
-    desc "Setup Laravel permissions."
+    desc "Setup Laravel permissions and optimize class loader."
     task :laravel_setup do
         on roles(:all), in: :sequence, wait: 5 do
             execute "chmod u+x #{release_path}/artisan"
@@ -33,6 +34,8 @@ namespace :deploy do
             execute "chmod -R 777 #{release_path}/app/storage/meta"
             execute "chmod -R 777 #{release_path}/app/storage/sessions"
             execute "chmod -R 777 #{release_path}/app/storage/views"
+            execute "php #{release_path}/artisan clear-compiled"
+            execute "php #{release_path}/artisan optimize"
         end
     end
 
