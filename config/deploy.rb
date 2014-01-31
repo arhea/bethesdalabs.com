@@ -6,6 +6,9 @@ set :application, "bethesdalabs"  # EDIT your app name
 set :scm, :git
 set :repo_url,  'git@github.com:arhea/bethesdalabs.com.git' # EDIT your git repository
 
+set :deploy_to, "/var/www/bethesdalabs.com"
+set :deploy_via, :remote_cache
+
 set :use_sudo, false
 set :ssh_options, {
     keys: %w(~/.ssh/id_rsa),
